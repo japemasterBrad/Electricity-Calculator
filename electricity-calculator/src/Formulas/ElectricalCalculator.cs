@@ -28,5 +28,15 @@
 
       return electricity.Voltage * electricity.Current;
     }
+
+    public float CalculateResistor(float powerVoltage, float ledVoltage, float desiredLEDCurrent)
+    {
+      Electricity electricity = new Electricity();
+      electricity.Voltage = powerVoltage;
+      electricity.LEDVoltage = ledVoltage;
+      electricity.LEDCurrent = desiredLEDCurrent;
+
+      return (electricity.Voltage - electricity.LEDVoltage) / electricity.LEDCurrent;
+    }
   }
 }

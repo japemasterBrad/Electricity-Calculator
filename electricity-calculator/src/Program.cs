@@ -16,6 +16,7 @@ namespace electricity_calculator.src
         Console.WriteLine("1) Calculate Voltage");
         Console.WriteLine("2) Calculate Current");
         Console.WriteLine("3) Calculate Wattage");
+        Console.WriteLine("4) Calculate Resistor");
         Console.WriteLine("\nE to Exit");
         Console.WriteLine("\nWhat do you want to convert?");
         string userInput = Console.ReadLine();
@@ -31,6 +32,10 @@ namespace electricity_calculator.src
         else if (userInput == "3")
         {
           Console.WriteLine($"Calculated Wattage: {convert.ConvertWattage(calculate)} w");
+        }
+        else if (userInput == "4")
+        {
+          Console.WriteLine($"Calculated Wattage: {convert.ConvertResistor(calculate)} Ohms");
         }
         else if ((userInput == "e") || (userInput == "E"))
         {

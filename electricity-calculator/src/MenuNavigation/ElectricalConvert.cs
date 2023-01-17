@@ -46,5 +46,21 @@ namespace electricity_calculator.src.MenuNavigation
 
       return calculate.CalculateWattage(userCurrent, userResistance);
     }
+    public float ConvertResistor(ElectricalCalculator calculate)
+    {
+      Console.WriteLine("Input Battery Voltage (V)");
+      string userInput = Console.ReadLine();
+      float userBatteryVoltage = float.Parse(userInput);
+
+      Console.WriteLine("Input Current LED Voltage(A)");
+      userInput = Console.ReadLine();
+      float userLEDVoltage = float.Parse(userInput);
+
+      Console.WriteLine("Input Ideal LED Voltage(A)");
+      userInput = Console.ReadLine();
+      float userLedCurrent = float.Parse(userInput);
+
+      return calculate.CalculateResistor(userBatteryVoltage, userLEDVoltage, userLedCurrent);
+    }
   }
 }
